@@ -18,7 +18,6 @@ echo ""
 echo "2. Creating versioned folder..."
 echo ""
 now=$(date +%Y_%m_%d_%H%M%S)
-#now=2016_03_24_123701
 destination_folder=$target_bucket_root/$target_version_folder/$now
 mkdir -p $workdir/$destination_folder
 cp -a $workdir/httrack-work-folder/$website/* $workdir/$destination_folder
@@ -37,13 +36,13 @@ echo "TODO: tempararily copying wp-content from local server folder"
 echo ""
 echo $workdir
 echo $destination_folder
-gsutil -m rsync -C -r /var/www/html/googleapps.doctusoft.com/www/wp-content/uploads/ $workdir/$destination_folder/wp-content/uploads
+/root/gsutil/gsutil -m rsync -C -r /var/www/html/googleapps.doctusoft.com/www/wp-content/uploads/ $workdir/$destination_folder/wp-content/uploads
 echo ""
 echo "4. Uploading versioned folder to a target Google test bukcet..."
 echo ""
 START=$(date +%s)
 #gsutil -m cp -r $workdir/$destination_folder gs://$target_bucket_root/$target_version_folder/$now
-gsutil -m rsync -r $workdir/$target_bucket_root/$target_version_folder/ gs://$target_bucket_root/$target_version_folder
+/root/gsutil/gsutil -m rsync -r $workdir/$target_bucket_root/$target_version_folder/ gs://$target_bucket_root/$target_version_folder
 END=$(date +%s)
 DIFF=$(($END - $START))
 echo ""

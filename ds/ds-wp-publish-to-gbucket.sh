@@ -11,7 +11,11 @@ echo "workdir set to $workdir"
 echo ""
 echo "1. Erasing local folder content, except for version folder"
 echo ""
+current=$(pwd)
+cd $workdir/$website
+ls $workdir/$website | grep -v "${version_folder}$"
 rm -r `ls $workdir/$website | grep -v "${version_folder}$"`
+cd $current
 echo ""
 echo "finished"
 echo ""
@@ -27,7 +31,7 @@ echo ""
 echo "4. Uploading website folder to Google live bucket..."
 echo ""
 START=$(date +%s)
-gsutil -m rsync -r $workdir/$website/ gs://$website
+/root/gsutil/gsutil -m rsync -r $workdir/$website/ gs://$website
 END=$(date +%s)
 DIFF=$(($END - $START))
 echo ""
