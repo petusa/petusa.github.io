@@ -28,7 +28,15 @@ echo "3. Making link transformations on live folder content..."
 echo ""
 grep -rl "http://${website}/${version_folder}/${version}" $workdir/$website/ --exclude-dir=${version_folder} | xargs sed -i "s/http:\/\/${website}\/${version_folder}\/${version}/http:\/\/${website}/g"
 echo ""
-echo "4. Uploading website folder to Google live bucket..."
+echo "links updated"
+echo ""
+echo "4. Updating robots.txt..."
+echo ""
+echo "Disallow: /${version_folder}/" >> $workdir/$website/robots.txt
+echo ""
+echo "updated"
+echo ""
+echo "5. Uploading website folder to Google live bucket..."
 echo ""
 START=$(date +%s)
 /root/gsutil/gsutil -m rsync -r $workdir/$website/ gs://$website
