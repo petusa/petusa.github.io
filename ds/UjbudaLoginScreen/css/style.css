@@ -1,3 +1,15 @@
+@font-face {
+    font-family: Exo2;
+    src: url("../fonts/Exo 2/Exo2-Regular.ttf");
+}
+@font-face {
+    font-family: Exo2Bold;
+    src: url("../fonts/Exo 2 Bold/Exo2-Bold.ttf");
+}
+@font-face {
+    font-family: Exo2Medium;
+    src: url("../fonts/Exo 2 Medium/Exo2-Medium.ttf");
+}
 html {
     height: 100%;
     overflow: auto;
@@ -15,9 +27,7 @@ body {
 }
 .box {
     background: white;
-    max-width: 400px;
-    min-width: 360px;
-    width: 40%;
+    width: 320px;
     -webkit-box-shadow: 5px 5px 3px 0px rgba(0,0,0,0.6);
     -moz-box-shadow: 5px 5px 3px 0px rgba(0,0,0,0.6);
     box-shadow: 5px 5px 3px 0px rgba(0,0,0,0.6);
@@ -44,9 +54,13 @@ body {
     display: inline-block;
     margin-top: 20px;
     position: relative;
-    font-size: 32px;
-    font-family: "sans-serif";
-    color: #2A6487;
+    font-size: 22px;
+    font-family: Exo2Medium;
+    color: #215E81;
+}
+.box.top label .capital {
+    font-size: 28px;
+    font-family: Exo2Bold;
 }
 .box.bottom {
     background: white;
@@ -63,9 +77,9 @@ body {
     background: #FF3838;
     outline: none;
     border: none;
-    padding: 15px 15px;
-    font-size: 1em;
-    font-weight: 300;
+    padding: 10px 10px;
+    font-size: 13px;
+    font-family: Exo2;
     border-radius: 3px;
     cursor: pointer;
 }
@@ -73,26 +87,31 @@ body {
     background-color: #2AB7EA;
 }
 .box .green {
-    background-color: #70C14A;
+    background-color: #5aba28;
+    padding: 5px 10px;
 }
 .box .mail {
-    background-image: url("../images/mail_icon.png");
+    background-image: url("../images/envelope.png");
     background-repeat: no-repeat;
     background-position: 5px;
     background-size: contain;
+    border-top: solid #5aba28 5px;
+    border-bottom: solid #5aba28 5px;
 }
 .box .strong {
-    font-weight: 500;
+    font-family: Exo2Bold;
 }
 .box button:hover {
     opacity: 0.8;
 }
 div.separator {
-    color: gray;
+    color: black;
+    font-family: Exo2;
+    padding: 2px;
 }
 .separator {
   width: 100%;
-  margin: .7em auto;
+  margin: .8em auto;
   overflow: hidden;
   text-align: center;
   font-weight:300;
@@ -104,7 +123,7 @@ div.separator {
   width: 10%;
   margin: 0 .5em .1em -55%;
   vertical-align: middle;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid lightgray;
 }
 .separator:after {
   margin: 0 -55% .1em .5em;
