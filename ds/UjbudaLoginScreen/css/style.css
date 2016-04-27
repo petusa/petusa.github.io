@@ -1,0 +1,111 @@
+html {
+    height: 100%;
+    overflow: auto;
+}
+body {
+    height: 100%;
+    background-image: url("../images/villanyi_uti_templom.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.box {
+    background: white;
+    max-width: 400px;
+    min-width: 360px;
+    width: 40%;
+    -webkit-box-shadow: 5px 5px 3px 0px rgba(0,0,0,0.6);
+    -moz-box-shadow: 5px 5px 3px 0px rgba(0,0,0,0.6);
+    box-shadow: 5px 5px 3px 0px rgba(0,0,0,0.6);
+    position: relative;
+    color: #333;
+    border-radius: 8px;
+    margin: 4px;
+    padding: 25px;
+    text-align: center;
+}
+.box.top {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-radius: 8px 8px 0 0;
+}
+.box.top .logo {
+    height: 150px;
+    background-image: url("../images/logo.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.box.top label {
+    display: inline-block;
+    margin-top: 20px;
+    position: relative;
+    font-size: 32px;
+    font-family: "sans-serif";
+    color: #2A6487;
+}
+.box.bottom {
+    background: white;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.box button {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin: 2px;
+    width: 100%;
+    color: white;
+    background: #FF3838;
+    outline: none;
+    border: none;
+    padding: 15px 15px;
+    font-size: 1em;
+    font-weight: 300;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.box .blue {
+    background-color: #2AB7EA;
+}
+.box .green {
+    background-color: #70C14A;
+}
+.box .mail {
+    background-image: url("../images/mail_icon.png");
+    background-repeat: no-repeat;
+    background-position: 5px;
+    background-size: contain;
+}
+.box .strong {
+    font-weight: 500;
+}
+.box button:hover {
+    opacity: 0.8;
+}
+div.separator {
+    color: gray;
+}
+.separator {
+  width: 100%;
+  margin: .7em auto;
+  overflow: hidden;
+  text-align: center;
+  font-weight:300;
+  color: #fff;
+}
+.separator:before, .separator:after {
+  content: "";
+  display: inline-block;
+  width: 10%;
+  margin: 0 .5em .1em -55%;
+  vertical-align: middle;
+  border-bottom: 1px solid;
+}
+.separator:after {
+  margin: 0 -55% .1em .5em;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Újbuda</title>
+        <link rel="stylesheet" href="css/reset.css" type="text/css" media="screen"/>
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+    </head>
+    <body>
+        <div class="box top">
+            <div class="logo"></div>
+            <label>Testületi Támogató Rendszer</label>
+        </div>
+        <div class="box bottom">
+            <button class="green mail" onclick="l()">Belépés Újbuda <span class="strong">Google</span> fiókkal</button>
+            <div class="separator">vagy</div>
+            <button class="blue" onclick="c()">Jelszó módosítás</button>
+            <button class="blue" onclick="m()">Levél az adminisztrátornak</button>
+        </div>
+        <script type="text/javascript">
+            var i=["_LD47341.jpg","_LD47658.jpg","_LDF6320.jpg","_ND68339.jpg","_VAN3705.jpg","villanyi_uti_templom.jpg"];
+            document.body.style.backgroundImage="url('images/"+i[Math.floor(Math.random()*i.length+1)-1]+"')";
+            function l(){window.location="https://www.google.com/a/ujbuda.hu/ServiceLogin?service=ah&amp;passive=true&amp;continue=https://appengine.google.com/_ah/conflogin%3Fcontinue%3Dhttps://ao-docs.appspot.com/url/ujbuda";}
+            function c(){window.location="https://accounts.google.com/b/0/EditPasswd";}
+            function m(){window.location="mailto:ttrsegitseg@ujbuda.hu";}
+        </script>
+    </body>
+</html>
