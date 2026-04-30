@@ -1,0 +1,17 @@
+<svg width="140" height="140" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+  <!-- Document outline -->
+  <rect x="10" y="15" width="110" height="120" rx="10" 
+        fill="#ffffff" stroke="#1e293b" stroke-width="3"/>
+
+  <!-- Fold corner -->
+  <path d="M90 15 L120 45 L90 45 Z" fill="#1e293b"/>
+
+  <!-- Header -->
+  <rect x="30" y="35" width="60" height="6" rx="3" fill="#1e293b"/>
+
+  <!-- Content lines -->
+  <rect x="30" y="55" width="70" height="5" rx="2.5" fill="#475569"/>
+  <rect x="30" y="70" width="65" height="5" rx="2.5" fill="#475569"/>
+  <rect x="30" y="85" width="60" height="5" rx="2.5" fill="#475569"/>
+  <rect x="30" y="100" width="50" height="5" rx="2.5" fill="#475569"/>
+</svg>

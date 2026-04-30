@@ -23,12 +23,28 @@
 			</div>
 			<div id="ddesc">
 				<h1>Peter Nagy</h1>
-				<h2>I help companies build high quality software - without compromise. 🚀</h2>
+				<h2>I help companies build high-quality software - without compromise. 🚀</h2>
 				<div id="dico">
 					<a href="https://github.com/petusa"><img src="assets/cgithub.svg" class="iico" /></a>
 					<a href="https://linkedin.com/in/petusa"><img src="assets/linkedin.svg" class="iico" /></a>
+					<a href="https://petusa.github.io/resume"><img alt="My resume" src="assets/resume.svg"
+							class="iico" /></a>
 				</div>
 			</div>
+		</div>
+		<div style="margin: 0 auto; width: 100%;">
+			<iframe id="timeline-frame" src="/resume/timeline.html" style="width:100%; border:none;visibility: hidden;"
+				scrolling="no">
+			</iframe>
+			<script>
+				window.addEventListener("message", function (event) {
+					const iframe = document.getElementById("timeline-frame");
+					if (event.data.height) {
+						iframe.style.height = event.data.height + "px";
+					}
+					iframe.style.visibility = "visible";
+				});
+			</script>
 		</div>
 	</div>
 </body>
